@@ -39,6 +39,14 @@
 			"email": "m.muazam.99@gmail.com",
 			"password": "$2a$10$m8mkKQtO3SwRnrELCs4SxOZRF21aWPgXbzuRWmLFlFBpkQKK40MUm",
 			"avatar": "/images/default.png"
+		},
+		{
+			"userId": "5C5e8phZw",
+			"name": "kunal",
+			"username": "kunal",
+			"email": "kunal@gmail.com",
+			"password": "$2a$10$O5dsBb./NoXX897nCm1Y..X.9b1SRJKjrHlp/GESWGLTeTT6k/5OC",
+			"avatar": "/images/myFile-1626157329177.png"
 		}
 	],
 	"movies": [

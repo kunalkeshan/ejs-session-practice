@@ -1,7 +1,6 @@
 {
   "name": "sessionejs",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
@@ -20,5 +19,14 @@
     "sharp": "^0.28.3",
     "shortid": "^2.2.16",
     "util": "^0.12.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmuazam98/ejs-session.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmuazam98/ejs-session/issues"
+  },
+  "homepage": "https://github.com/mmuazam98/ejs-session#readme",
+  "description": ""
 }

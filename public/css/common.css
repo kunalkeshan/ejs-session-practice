@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif !important;
 }
+
 nav {
   position: relative;
   display: flex;
@@ -58,4 +59,36 @@ nav .profile {
   margin-left: 20px;
   cursor: pointer;
   border-radius: 50%;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer .footer__container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+footer .footer__link{
+  margin: 0 auto;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+footer .footer__link:hover,
+footer .footer__link:focus{
+  transform: scale(1.1);
 }
