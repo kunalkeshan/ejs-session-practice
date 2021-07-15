@@ -8,8 +8,10 @@ const bcrypt = require("bcryptjs");
 const salt = 10;
 const session = require("express-session");
 const multer = require("multer");
+const cookie = require("cookie-parser");
 // const auth = require("../middleware/auth");
 
+Router.use(cookie())
 const auth = (req, res, next) => {
     if (req.session.user) {
       next();
@@ -32,7 +34,7 @@ Router.use("/", authRoutes);
 //! MULTER CONFIG
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, __dirname + "/public/images");
+    cb(null, __dirname + "/../public/images");
   },
   filename: function (req, file, cb) {
     cb(null, file.fieldname + "-" + Date.now() + ".png");
@@ -55,7 +57,7 @@ Router.post(
           await writeFile(filename, JSON.stringify(db, null, "\t"));
         }
       });
-      res.status(200).json({ message: "Profile Updated Successfully" });
+      res.status(200).redirect("/profile");
     } catch (err) {
       res.status(400).json();
     }
@@ -137,6 +139,7 @@ Router.post("/login", async (req, res) => {
     let isMatch = await bcrypt.compare(password, user[0].password);
     if (isMatch) {
       console.log("Success");
+      res.cookie("username", user[0].username);
       req.session.user = {
         userId: user[0].userId,
         email: user[0].email,
